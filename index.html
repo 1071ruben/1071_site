@@ -15,11 +15,14 @@
     <link rel="icon" href="img/d.png">
 
     <!-- Core Stylesheet -->
-    <link href="style.css" rel="stylesheet">
 
     <!-- Responsive CSS -->
-    <link href="css/responsive.css" rel="stylesheet">
+<!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="style_v2.css" rel="stylesheet">
+    <!-- <link href="css/animate.css" rel="stylesheet"> -->
 
+    <link href="style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
 </head>
 
 <body>
@@ -31,27 +34,27 @@
     <!-- ***** Header Area Start ***** -->
     <header class="header_area clearfix">
         <div class="container-fluid h-100">
-            <div class="row h-100">
+            <div class="row h-100" style="margin-right: 0; margin-left:0;">
                 <!-- Menu Area Start -->
                 <div class="col-12 h-100">
                     <div class="menu_area h-100">
                         <nav class="navbar h-100 navbar-expand-lg align-items-center">
                             <!-- Logo -->
-                            <div class="col-md-6">
-                                    <a class="navbar-brand" href="index.html"><img src="img/logo.png"  style=" max-width: 20%" alt="logo"></a>
+                            <div class="col-6">
+                                    <a class="navbar-brand" href="index.html"><img id="img_nav" class="nav-logo"  src="img/d.png"  alt="logo"></a>
                             </div>
                             <!-- Menu Area -->
-                             <div class="col-md-6">
-                                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mosh-navbar" aria-controls="mosh-navbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                             <div class="col-6" style="display: contents;">
+                                        <button class="navbar-toggler"  style="float: right;" type="button" data-toggle="collapse" data-target="#mosh-navbar" aria-controls="mosh-navbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 
                                         <div class="collapse navbar-collapse justify-content-end" id="mosh-navbar">
                                             <ul class="navbar-nav animated" id="nav">
                                                 
-                                                <li class="nav-item"><a class="nav-link" href="about.html">Acerca De</a></li>
+                                                <li class="nav-item"><a class="nav-link" data-link="acerca">Acerca De</a></li>
+                                                <li class="nav-item"><a class="nav-link" data-link="equipo">Equipo</a></li>
                                                 <li class="nav-item"><a class="nav-link" href="services.html">Bolsa de Trabajo</a></li>
-                                                <li class="nav-item"><a class="nav-link" href="portfolio.html">Equipo</a></li>
                                                 <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                                                <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+                                                <li class="nav-item"><a class="nav-link" data-link="contacto">Contacto</a></li>
                                             </ul>
                                             
                                         </div>
@@ -64,8 +67,13 @@
     </header>
     <!-- ***** Header Area End ***** -->
 
-     <div style="overflow-x: hidden;"> <img style="position: absolute;  display: block;  top:25%;  margin-left: auto;  -webkit-filter: drop-shadow(5px 5px 5px #222);
-    filter:        drop-shadow(0px 0px 7px #ffff)  margin-right: auto;    left: 30%;  width:40% ;  margin-bottom: auto;    margin-top: auto;"  src="img/logo.png"><div id="movi"></div></div>
+     <div style="overflow-x: hidden;"> 
+        <div class="col-md-6 col-sm-12" style=" left: 50%; transform: translate(-50%,0); position: absolute; z-index: 1; top: 25%" >
+            <img style=" -webkit-filter: drop-shadow(5px 5px 5px #222);  filter:drop-shadow(5px 5px 5px #222)"   src="img/logo2.png">
+        </div>        
+            
+        <div id="movi"></div>
+    </div>
 
 
 
@@ -73,7 +81,7 @@
 
     <!---  Acerca de -->
 
-    <section class="mosh-aboutUs-area section_padding_100_0">
+    <section class="mosh-aboutUs-area section_padding_100_0" id="acerca">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-12 col-md-6">
@@ -87,7 +95,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-6">
-                    <div style="max-height: 50%; text-align: center;"     class="mosh-about-us-thumb wow fadeInUp" data-wow-delay="0.5s">
+                    <div style="max-height: 50%; text-align: center;"     class="mosh-about-us-thumb wow fadeInUp" data-wow-delay="0.2s">
                         <img src="img/d.png" alt="" style="max-width: 50% !important;">
                     </div>
                 </div>
@@ -99,13 +107,13 @@
 
      <!-- ***** Equipo ***** -->
 
- <section class="mosh-team-area section_padding_100">
+ <section class="mosh-team-area section_padding_100" id="equipo">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-md-10">
                     <div class="section-heading text-center">
                         
-                        <h2>Conoce nuestro Equipo</h2>
+                        <h2>Conoce Nuestro Equipo</h2>
                         <!-- <h5 class="mt-30">Est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mat tis effic iturut magna. </h5> -->
                     </div>
                 </div>
@@ -118,11 +126,22 @@
                         <div class="single-team-slide text-center">
                             <!-- Thumbnail -->
                             <div class="team-thumbnail">
-                                <img src="img/u2.png" alt="">
+                                 <div class="mosh-portfolio">
+                                    <!-- Single gallery Item Start -->
+                                    <div class="single_gallery_item gd" style="width:100%;">
+                                        <img src="img/u2.png" alt="">
+                                        <div class="gallery-hover-overlay d-flex align-items-center justify-content-center">
+                                            <div class="port-hover-text text-center">
+                                                <h4>Sobre</h4>
+                                                <a href="#">Frase..</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <!-- Meta Info -->
                             <div class="team-meta-info">
-                                <h4>Guapo 1</h4>
+                                <h4>Ing. 1</h4>
                                 <span>Desarrollador</span>
                                 <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque.</p>
                             </div>
@@ -133,45 +152,77 @@
                         <div class="single-team-slide text-center">
                             <!-- Thumbnail -->
                             <div class="team-thumbnail">
-                                <img src="img/u2.png" alt="">
+                                 <div class="mosh-portfolio">
+                                    <!-- Single gallery Item Start -->
+                                    <div class="single_gallery_item gd" style="width:100%;">
+                                        <img src="img/u2.png" alt="">
+                                        <div class="gallery-hover-overlay d-flex align-items-center justify-content-center">
+                                            <div class="port-hover-text text-center">
+                                                <h4>Sobre</h4>
+                                                <a href="#">Frase..</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <!-- Meta Info -->
                             <div class="team-meta-info">
-                                <h4>Guapo 2</h4>
+                                <h4>Ing. 2</h4>
                                 <span>Desarrollador</span>
                                 <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque.</p>
                             </div>
-                            <!-- Social Info -->
                             
                         </div>
                         <!-- Single Team Slide -->
                         <div class="single-team-slide text-center">
                             <!-- Thumbnail -->
+                           <!-- Thumbnail -->
                             <div class="team-thumbnail">
-                                <img src="img/u2.png" alt="">
+                                 <div class="mosh-portfolio">
+                                    <!-- Single gallery Item Start -->
+                                    <div class="single_gallery_item gd" style="width:100%;">
+                                        <img src="img/u2.png" alt="">
+                                        <div class="gallery-hover-overlay d-flex align-items-center justify-content-center">
+                                            <div class="port-hover-text text-center">
+                                                <h4>Sobre</h4>
+                                                <a href="#">Frase..</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <!-- Meta Info -->
                             <div class="team-meta-info">
-                                <h4>Guapo 3</h4>
+                                <h4>Ing. 3</h4>
                                 <span>Desarrollador</span>
                                 <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque.</p>
                             </div>
-                            <!-- Social Info -->
                             
                         </div>
                         <!-- Single Team Slide -->
                         <div class="single-team-slide text-center">
                             <!-- Thumbnail -->
+                            <!-- Thumbnail -->
                             <div class="team-thumbnail">
-                                <img src="img/u2.png" alt="">
+                                 <div class="mosh-portfolio">
+                                    <!-- Single gallery Item Start -->
+                                    <div class="single_gallery_item gd" style="width:100%;">
+                                        <img src="img/u2.png" alt="">
+                                        <div class="gallery-hover-overlay d-flex align-items-center justify-content-center">
+                                            <div class="port-hover-text text-center">
+                                                <h4>Sobre</h4>
+                                                <a href="#">Frase..</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <!-- Meta Info -->
                             <div class="team-meta-info">
-                                <h4>Guapo 4</h4>
+                                <h4>Ing. 4</h4>
                                 <span>Desarrollador</span>
                                 <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque.</p>
                             </div>
-                            <!-- Social Info -->
                             
                         </div>
                     </div>
@@ -204,7 +255,7 @@
                 </div>
             </div>
         </div>
-        <div class="few-words-thumb bg-img wow fadeInRightBig" data-wow-delay="1.1s" style="background-image: url(img/w.jpg);"></div>
+        <div class="few-words-thumb bg-img wow fadeInRightBig" data-wow-delay="0.3s" style="background-image: url(img/w.jpg);"></div>
     </section>
     
 
@@ -216,7 +267,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="cta-content text-center wow fadeIn" data-wow-delay="0.5s">
+                    <div class="cta-content text-center wow fadeIn" data-wow-delay="0.2s">
                         <div class="section-heading">
                             <p>Entérate sobre noticias e historias relevantes que nos mueven</p>
                             <h2>Visita nuestro Blog</h2>
@@ -230,7 +281,7 @@
     <!-- ***** CTA Area End ***** -->
 
     <!-- ***** Contact Area Start ***** -->
-    <section class="contact-area section_padding_100">
+    <section class="contact-area section_padding_100" id="contacto">
         <div class="container">
             <div class="row">
                 <!-- Contact Form Area -->
@@ -251,7 +302,11 @@
                                 <div class="col-12">
                                     <textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="Mensaje"></textarea>
                                 </div>
-                                <button class="btn mosh-btn mt-50" type="submit">Enviar</button>
+                                <div class="col-2"></div>
+                                <div class="col-1">
+                                    <button class="btn mosh-btn mt-50" type="submit">Enviar</button>
+                                    
+                                </div>
                             </div>
                         </form>
                     </div>
@@ -264,19 +319,14 @@
                             <div class="contact-icon mr-15">
                                 <img src="img/core-img/map.png" alt="">
                             </div>
-                            <p>4127/ 5B-C Mislane Road,<br> Gibraltar, UK</p>
+                            <p>Ave. Revolucion 1106 <br> Pachuca, Hidalgo, 42060</p>
                         </div>
-                        <div class="single-contact-info d-flex">
-                            <div class="contact-icon mr-15">
-                                <img src="img/core-img/call.png" alt="">
-                            </div>
-                            <p>Main: 203-808-8613 <br> Office: 203-808-8648</p>
-                        </div>
+                       
                         <div class="single-contact-info d-flex">
                             <div class="contact-icon mr-15">
                                 <img src="img/core-img/message.png" alt="">
                             </div>
-                            <p>office@yourbusiness.com</p>
+                            <p>contacto@1071.digital</p>
                         </div>
                         
                     </div>
@@ -292,76 +342,10 @@
         <div class="top-footer-area section_padding_100_0">
             <div class="container">
                 <div class="row">
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="single-footer-widget mb-100">
-                            <a href="#" class="mb-50 d-block"><img src="img/core-img/logo.png" alt=""></a>
-                            <p>Etiam nec odio vestibulum est mattis effic iturut magna. Pellent esque sit amet tellus blandit. Etiam nec odio vestibul.</p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="single-footer-widget mb-100">
-                            <h5>Fast links</h5>
-                            <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Testimonials</a></li>
-                                <li><a href="#">Services &amp; Features</a></li>
-                                <li><a href="#">Accordions and tabs</a></li>
-                                <li><a href="#">Menu ideas</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="single-footer-widget mb-100">
-                            <h5>Blog</h5>
-                            <div class="footer-single--blog-post">
-                                <a href="#" class="blog-post-date">
-                                    <p>23 September, 2017</p>
-                                </a>
-                                <a href="#" class="blog-post-title">
-                                    <h6>Why we love stock photos</h6>
-                                </a>
-                            </div>
-                            <div class="footer-single--blog-post">
-                                <a href="#" class="blog-post-date">
-                                    <p>22 September, 2017</p>
-                                </a>
-                                <a href="#" class="blog-post-title">
-                                    <h6>Designin on grid. A few rules. </h6>
-                                </a>
-                            </div>
-                            <div class="footer-single--blog-post">
-                                <a href="#" class="blog-post-date">
-                                    <p>20 September, 2017</p>
-                                </a>
-                                <a href="#" class="blog-post-title">
-                                    <h6>2017 World Design Congress</h6>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-lg-3">
-                        <div class="single-footer-widget mb-100">
-                            <h5>Contact Info</h5>
-                            <div class="footer-single-contact-info d-flex">
-                                <div class="contact-icon">
-                                    <img src="img/core-img/map.png" alt="">
-                                </div>
-                                <p>4127/ 5B-C Mislane Road, Gibraltar, UK</p>
-                            </div>
-                            <div class="footer-single-contact-info d-flex">
-                                <div class="contact-icon">
-                                    <img src="img/core-img/call.png" alt="">
-                                </div>
-                                <p>Main: 203-808-8613 <br> Office: 203-808-8648</p>
-                            </div>
-                            <div class="footer-single-contact-info d-flex">
-                                <div class="contact-icon">
-                                    <img src="img/core-img/message.png" alt="">
-                                </div>
-                                <p>office@yourbusiness.com</p>
-                            </div>
-                        </div>
-                    </div>
+                   <div  style="margin-bottom: 10%;"    >
+                       <p>Derechos Reservados</p><img style=" -webkit-filter: drop-shadow(5px 5px 5px #222);  filter:drop-shadow(5px 5px 5px #222); max-width: 20%; "   src="img/logo2.png">
+                       <p>@ 2018</p>
+                   </div>
                 </div>
             </div>
         </div>
@@ -390,6 +374,20 @@
 
     <!-- jQuery-2.2.4 js -->
     <script type="text/javascript">
+
+
+        $('li a').on('click', function (e) {
+    var targetSec = $(this).attr('data-link');
+    $('html, body').animate({
+        scrollTop: $('#' + targetSec).offset().top
+    }, 1000);
+});
+
+         $('.nav-item').on('click', function (e) {
+    if($("#mosh-navbar").hasClass('show')){
+        $("#mosh-navbar").removeClass('show');
+    }
+});
         
         (function() {
     'use strict';
@@ -404,7 +402,7 @@
         count = 0,
         Tau = Math.PI * 2,
         mouseX = 0,
-        mouseY = 0,
+        mouseY = 1000,
         amtX = 50,
         amtY = 50,
         sep = 100,
