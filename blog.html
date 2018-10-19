@@ -51,7 +51,7 @@
                                             <ul class="navbar-nav animated" id="nav">
                                                 
                                                 <li class="nav-item"><a class="nav-link" href="services.html">Bolsa de Trabajo</a></li>
-                                                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                                                <li class="nav-item active"><a class="nav-link" href="blog.html">Blog</a></li>
                                                 <li class="nav-item"><a class="nav-link" data-link="contacto">Contacto</a></li>
                                             </ul>
                                             
@@ -267,8 +267,64 @@
     </section>
     <!-- ***** Blog Area End ***** -->
 
+    <!-- ***** Contact Area Start ***** -->
+    <section class="contact-area section_padding_100" id="contacto">
+        <div class="container">
+            <div class="row">
+                <!-- Contact Form Area -->
+                <div class="col-12 col-md-8">
+                    <div class="contact-form-area">
+                        <h2>Contáctanos</h2>
+                        <form action="#">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    <input type="text" class="form-control" id="name" placeholder="Nombre">
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <input type="email" class="form-control" id="email" placeholder="E-mail">
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" class="form-control" id="subject" placeholder="Asunto">
+                                </div>
+                                <div class="col-12">
+                                    <textarea name="message" class="form-control" id="message" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                                </div>
+                                <div class="col-2"></div>
+                                <div class="col-1">
+                                    <button class="btn mosh-btn mt-50" type="submit">Enviar</button>
+                                    
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Contact Information -->
+                <div class="col-12 col-md-4">
+                    <div class="contact-information">
+                        <h2>Nuestros Datos</h2>
+                        <div class="single-contact-info d-flex">
+                            <div class="contact-icon mr-15">
+                                <img src="img/core-img/map.png" alt="">
+                            </div>
+                            <p>Ave. Revolucion 1106 <br> Pachuca, Hidalgo, 42060</p>
+                        </div>
+                       
+                        <div class="single-contact-info d-flex">
+                            <div class="contact-icon mr-15">
+                                <img src="img/core-img/message.png" alt="">
+                            </div>
+                            <p>contacto@1071.digital</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Contact Area End ***** -->
+
     <!-- ***** Footer Area Start ***** -->
-    <footer class="footer-area clearfix">
+  <footer class="footer-area clearfix">
         <!-- Top Fotter Area -->
         <div class="top-footer-area section_padding_100_0">
             <div class="container">
@@ -282,6 +338,8 @@
         </div>
         
     </footer>
+    
+    <!-- ***** Footer Area End ***** -->
     
        
     
@@ -486,6 +544,14 @@
     document.addEventListener('DOMContentLoaded', animate);
 
 })();
+
+        $('li a').on('click', function (e) {
+            var targetSec = $(this).attr('data-link');
+            $('html, body').animate({
+                scrollTop: $('#' + targetSec).offset().top
+            }, 1000);
+        });
+
     </script>
     
 </body>
